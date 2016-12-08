@@ -1,0 +1,22 @@
+<form class="form TaskInputContainer form-horizontal" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label htmlFor="taskInput" class="TaskInputLabel col-sm-2">Title your task:</label>
+    <div class="col-sm-10">
+      <input id="taskInput" type="text" class="form-control TaskInput" [(ngModel)]="task.title" name="title" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label htmlFor="taskInputContent" class="TaskInputLabel col-sm-2">Content:</label>
+    <div class="col-sm-10">
+      <textarea id="taskInputContent" class="form-control TaskInputContent" [(ngModel)]="task.content" name="content"></textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label htmlFor="taskInputDeadline" class="TaskInputLabel col-sm-2">Deadline:</label>
+    <div class="col-sm-10">
+      <input id="taskInputDeadline" type="date" class="form-control TaskInputDeadline" [(ngModel)]="task.deadline" name="deadline" />
+    </div>
+  </div>
+  <button id="taskAdd" class="button btn btn-success TaskInputBtn" type="submit" (click)="addTask()">Save</button>
+
+</form>

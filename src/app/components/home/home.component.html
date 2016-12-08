@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="HomeTaskInputContainer">
+    <app-task-input (onSubmitted)="onSubmitted($event)"></app-task-input>
+    <app-search-field (onSearching)="onSearching($event)"></app-search-field>
+  </div>
+
+  <div class="HomeTasksListContainer">
+    <div class="row">
+      <button class="button btn btn-info addTaskBtn" (Click)="showInputTaskModal()">Add Task</button>
+    </div>
+    <app-tasks-list [tasks]="tasks"></app-tasks-list>
+  </div>
+</div>
